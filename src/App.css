@@ -79,3 +79,40 @@ homecontent {
     border: 1px solid rgb(204, 204, 204);
     width: 15rem;
 }
+
+.menuitem{
+    border: 1px solid red;
+    width: 40rem;
+    height: 6rem;
+}
+.pizza-img {
+    height: 5rem;
+    width: 5rem;
+}
+.inc-dec-container{
+    gap: .6rem;
+}
+.inc-dec {
+    border: 1px solid #2121fa;
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    background-color: #2121fa;
+    font-weight: 100;
+    color: white;
+    
+}
+.add-to-cart-and-dlt {
+    border: 1px solid #2121fa;
+    background-color: #2121fa;
+    color: white;
+    border-radius: 20px;
+    width: auto;
+    font-size: .8rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+.options-container {
+    gap: 1rem;
+}

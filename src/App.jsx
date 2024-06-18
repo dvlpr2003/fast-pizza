@@ -5,6 +5,7 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Menu from "./ui/Menu";
 
 
 function App() {
@@ -15,7 +16,8 @@ function App() {
       element:(<Home/>)
     },
     {
-      
+      path:"menu",
+      element:(<Menu/>)
     }
   ])
 
