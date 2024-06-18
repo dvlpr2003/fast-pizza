@@ -4,7 +4,7 @@
 }
 .header {
     border: 1px solid #003cff;
-    height: 5rem;
+    height: auto;
     background-color: #003cff;
     color: white;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -19,6 +19,16 @@
 .item-center {
     align-items: center;
 }
+.flex-column {
+    flex-direction: column;
+
+}
+.flex-wrap {
+    flex-wrap: wrap;
+}
+.gap {
+    gap: 1rem;
+}
 .justify-content {
     justify-content: space-between;
 }
@@ -31,9 +41,41 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+
 .input-border {
     border: none;
 }
+
+
+
+.center {
+    justify-content: center;
+    align-items: center;
+}
+homecontent {
+    margin-top: 2rem;
+    font-weight: bold;
+}
+
+.home-cont-txt {
+    font-family: Roboto,sans-serif;
+    font-size: 1.8rem;
+    word-spacing: 5px;
+}
+.p-cont-txt {
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: normal;
+    font-size: 1.3rem;
+    word-spacing: 5px;
+}
 .radius {
     border-radius: 20px;
+}
+.homecontent {
+    border: 1px solid black;
+}
+.name-input {
+    border: 1px solid rgb(204, 204, 204);
+    width: 15rem;
 }
