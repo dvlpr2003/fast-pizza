@@ -13,6 +13,9 @@
     padding-left: 1rem;
     padding-right: 1rem;
 }
+.bold {
+    font-weight: bold;
+}
 .flex {
     display: flex;
 }
@@ -81,13 +84,16 @@ homecontent {
 }
 
 .menuitem{
-    border: 1px solid red;
+    border-bottom: 1px solid #dedefb;
     width: 40rem;
     height: 6rem;
+    gap: 1.4rem;
+    padding-left: .5rem;
 }
 .pizza-img {
     height: 5rem;
     width: 5rem;
+    border-radius: 10px;
 }
 .inc-dec-container{
     gap: .6rem;
@@ -99,7 +105,6 @@ homecontent {
     text-align: center;
     border-radius: 50%;
     background-color: #2121fa;
-    font-weight: 100;
     color: white;
     
 }
@@ -109,10 +114,22 @@ homecontent {
     color: white;
     border-radius: 20px;
     width: auto;
+    height: 2.3rem;
     font-size: .8rem;
     padding-left: 1rem;
     padding-right: 1rem;
 }
+
+.container2 {
+    width: 100%;
+    gap: .2rem;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.price-and-quantity {
+    padding-right: 1rem;
+}
 .options-container {
     gap: 1rem;
+    margin-left: auto;
+    justify-content: flex-end;
 }

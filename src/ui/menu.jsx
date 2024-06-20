@@ -1,33 +1,52 @@
 import Header from "../component/header"
 import "../App.css"
+import { useEffect ,useState} from "react"
+import axios from "axios"
 
-const Menu =()=>{
+// import getData from "../services/api"
+
+
+const Menu = ()=>{
+    const [Menudata,setmenudata]=useState()
+    console.log(Menudata)
+    useEffect( ()=>{
+        async function callBack(){
+            try{
+                const response = await axios.get("https://react-fast-pizza-api.onrender.com/api/menu")
+                setmenudata(response.data['data'])
+            }catch(error){
+                console.log(error)
+            }
+        }
+        callBack()     
+    },[])
     return(
         <>
         <Header/>
-        <MenuItems/>
-
+        <MenuItems Menudata={Menudata}/>
         </>
     )
 }
 
-const MenuItems = ()=>{
+function MenuItems({Menudata}){
     return(
         <main className = "flex flex-column center">
-            <Items/>
+            {
+                Menudata&&Menudata.map((e)=>{<Items key={e.id} name={e.name} price ={e.unitPrice} imageurl ={e.imageUrl}/>})
+            }
         </main>
     )
 }
-const Items =()=>{
+function Items ({name,price,imageurl}){
     return(
         
             <div className="menuitem flex item-center">
-                <img src="img/instadv.png" alt=""  className="pizza-img"/>
-                <div className="flex flex-column ">
-                    <span>Margherita</span>
+                <img src={imageurl} alt=""  className="pizza-img"/>
+                <div className="flex flex-column container2">
+                    <span className="bold">{name}</span>
                     <span>Tomato, Mozzarella, Basil</span>
-                    <div className="flex item-center">
-                        <span>€12.00</span>
+                    <div className="flex item-center flex-warp price-and-quantity">
+                        <span>€{price}</span>
                         <div className="flex options-container">
                             <div className="flex center inc-dec-container">
                                 <div className="inc-dec flex center"><span>-</span></div>
